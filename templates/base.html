@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Learn Computer Science</h1>
+    </header>
+    <nav>
+        <a href="{{ url_for('home') }}">Home</a>
+        <a href="{{ url_for('web_dev') }}">Web Development</a>
+        <a href="{{ url_for('networks') }}">Networks</a>
+        <a href="{{ url_for('ai') }}">AI</a>
+        <a href="{{ url_for('cybersecurity') }}">Cybersecurity</a>
+    </nav>
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+    <footer>
+        &copy; 2024 Learn Computer Science
+    </footer>
+</body>
+</html>
